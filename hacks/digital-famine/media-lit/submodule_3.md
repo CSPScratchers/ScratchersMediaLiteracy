@@ -4,12 +4,12 @@ title: "Submodule 3"
 description: "Submodule 3 of Analytics/Admin Mini-Quest"
 permalink: /digital-famine/media-lit/submodule_3/
 parent: "Analytics/Admin"
-team: "Curators"
+team: "Scratchers"
 submodule: 3
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]
-author: "Curators Team"
-date: 2025-10-21
+author: "Adhav, Ethan, Rishabh"
+date: 2025-10-28
 ---
 
 # Submodule 3
