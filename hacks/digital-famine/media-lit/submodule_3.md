@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Truth Scanner"
-description: "Final line of defense from foregin invaders"
+description: "Third line of defense from foregin invaders"
 permalink: /digital-famine/media-lit/submodule_3/
 parent: "Analytics/Admin"
 team: "Scratchers"

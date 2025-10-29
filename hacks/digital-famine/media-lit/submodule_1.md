@@ -4,7 +4,7 @@ title: "Awareness"
 description: "First line of defense from foreign invaders"
 permalink: /digital-famine/media-lit/submodule_1/
 parent: "Analytics/Admin"
-team: "Curators"
+team: "Scratchers"
 submodule: 1
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]

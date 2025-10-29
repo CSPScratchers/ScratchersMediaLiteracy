@@ -22,7 +22,7 @@ github_username: open-coding-society
 github_repo: "pages" 
 baseurl: "/ScratchersMediaLiteracy" 
 future: true
-url: "https://https:/cspscratchers.github.io/"
+url: "https://cspscratchers.github.io/"
 
 
 # Build settings
