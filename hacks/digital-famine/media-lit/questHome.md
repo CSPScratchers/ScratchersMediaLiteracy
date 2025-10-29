@@ -4,12 +4,9 @@ tailwind: True
 title: Media Literacy Quest
 description: >
   Learn about media literacy and help defent Media Literacy plant from Foreign invaders. Build your shield level by completing the modules. 
-<<<<<<< HEAD:hacks/digital famine/media-lit/questHome.md
 author: CSP 2025-26
-=======
-author: CSA 2025-26
->>>>>>> b701b48dec0e55dc0fbcf66de1fd863d4cbcecae:hacks/digital-famine/media-lit/questHome.md
 permalink: /digital-famine/media/
+breadcrumb: true
 lxdData:
   Title: "Mastery of Media Literacy Modules"
   Description: "Complete your Media Literacy journey and unlock your vault and defend your planet!"
