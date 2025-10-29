@@ -8,6 +8,7 @@ team: "Scratchers"
 submodule: 2
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]
+breadcrumbs: true
 author: "Anwita Bandaru and Nick Diaz"
 date: 2025-10-21
 ---
