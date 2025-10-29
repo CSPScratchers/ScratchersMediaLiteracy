@@ -28,10 +28,7 @@ Before you recieve your mission to protect Media Literacy Planet, you'll need to
 body {
   min-height: 100vh;
   /* use the image placed under hacks/digital-famine/media-lit/media/assets/ */
-  background: url('ScratchersMediaLiteracy/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-color: #061226; /* fallback */
-}
+  background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
 .game-container {
     background: linear-gradient(135deg, #353e74ff, #9384d5ff);
     border-radius: 15px;
