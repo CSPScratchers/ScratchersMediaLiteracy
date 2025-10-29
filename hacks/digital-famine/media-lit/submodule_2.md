@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Bias Checker"
-description: "Second line of defense against foreign invaders"
+title: "Bias Detector"
+description: "Second line of defense from foregin invaders"
 permalink: /digital-famine/media-lit/submodule_2/
 parent: "Analytics/Admin"
 team: "Scratchers"
@@ -12,7 +12,7 @@ author: "Anwita Bandaru and Nick Diaz"
 date: 2025-10-21
 ---
 
-# Bias Checker
+# Bias Detector
 
 ### Why is checking for bias Important?
 The alien misinformation swarm doesn’t invade with lasers or ships — it attacks minds.
