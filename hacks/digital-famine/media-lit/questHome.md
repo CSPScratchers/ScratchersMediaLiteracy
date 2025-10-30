@@ -5,7 +5,7 @@ title: Media Literacy Quest
 description: >
   Learn about media literacy and help defent Media Literacy plant from Foreign invaders. Build your shield level by completing the modules. 
 author: CSP 2025-26
-permalink: /digital-famine/media/
+permalink: /digital-famine/media-lit/
 breadcrumb: true
 lxdData:
   Title: "Mastery of Media Literacy Modules"
@@ -38,5 +38,14 @@ lxdData:
       Lessons: "/digital-famine/media-lit/submodule_3/"
       Image: "/images/digital-famine/media-lit.svg"
       Alt: "Analytics Submodule 3"
+    - Title: "Bias Sort"
+      Genre: "Integration"
+      Level: 4
+      Description: "Team-defined analytics and mastery module"
+      Categories: ["Certificate", "Integration", "Achievement"]
+      Video: "/digital-famine/media-lit/submodule_4-video"
+      Lessons: "/digital-famine/media-lit/submodule_4/"
+      Image: "/images/digital-famine/media-lit.svg"
+      Alt: "Analytics Submodule 4"
 ---
 {%- include tailwind/cs-portfolio-quest_info.html -%}
