@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Submodule 1"
+title: "Media Awareness"
 description: "Submodule 1 of Analytics/Admin Mini-Quest"
 permalink: /digital-famine/media-lit/submodule_1/
 parent: "Analytics/Admin"
