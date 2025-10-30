@@ -290,7 +290,7 @@ class GameLevelHomePage {
                 localStorage.setItem('planetProgression', JSON.stringify(this.progression));
                 console.log('Traveling to Media Literacy Planet...');
                 this.debugProgress();
-                window.location.href = '/digital-famine/media/';
+                window.location.href = '/digital-famine/media-lit/';
               },
               primary: true
             }
