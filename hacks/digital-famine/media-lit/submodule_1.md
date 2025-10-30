@@ -17,28 +17,28 @@ date: 2025-10-21
 
 <div class="intro-text">
   <strong>Mission Log:</strong><br><br>
-  You've entered the <strong>orbit of Media Literacy Planet</strong> — a critical stop in your journey to restore humanity’s understanding of truth. Across galaxies, misinformation has clouded the minds of humans, blurring the lines between fact and fiction. Your mission is to recover media literacy and bring knowledge back to Earth. <br><br>
+  You've entered the <strong>orbit of Media Literacy Planet</strong> — a critical stop in your journey to restore humanity’s understanding of truth. Across the galaxy, misinformation has clouded the minds of humans, blurring the lines between fact and fiction. Your mission is to recover media literacy and bring that knowledge back to Earth. <br><br>
 
   <strong>Why this matters:</strong><br>
-  Media literacy is our first line of defense against deception. Every day, countless messages compete for our attention — some inform, others persuade, and many sell. Without the ability to recognize these differences, society risks confusion, bias, and manipulation.<br><br>
+  Media literacy is our first line of defense against deception. Every day, countless messages compete for our attention. Some media informs, others persuade, and many sell. Without the ability to recognize these differences, society risks confusion, bias, and manipulation.<br><br>
 
   <strong>Skills you will gain:</strong><br>
   On this planet, you will train to:
   <ul>
     <li>Differentiate between <strong>real</strong> and <strong>fake news</strong></li>
     <li>Identify the <strong>purpose</strong> behind different forms of media</li>
-    <li>Recognize persuasive techniques and emotional manipulation</li>
+    <li>Recognize sources of bias in media and learn how to identify the truth</li>
     <li>Develop critical thinking and skepticism when encountering online content</li>
   </ul>
 
   <strong>Mission Objective:</strong><br>
-  Alien invaders are attacking with confusing news artifacts! Sort each artifact by its purpose — <strong>Persuade</strong>, <strong>Inform</strong>, or <strong>Sell</strong>. Each correct classification strengthens your shield. Reach a score of <strong>7</strong> to complete the mission and proceed to the next planet: <strong>Media Bias</strong>.
+  Alien invaders are attacking your spaceship with confusing news pieces! Sort each artifact by its purpose: <strong>Persuade</strong>, <strong>Inform</strong>, or <strong>Sell</strong>. Each correct classification strengthens your protective shield. Reach a score of <strong>7</strong> to complete the mission and proceed to your next mission: <strong>Media Bias</strong>.
 </div>
 
 <style>
 body {
   min-height: 100vh;
-  background: url('https://cdn.pixabay.com/photo/2017/02/12/21/29/spaceship-2068432_1280.jpg') no-repeat center center fixed;
+  background: url('https://img.freepik.com/free-vector/space-ship-window-with-space-planets-stars-cartoon-vector-illustration_1284-16119.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;
