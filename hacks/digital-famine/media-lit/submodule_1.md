@@ -22,7 +22,7 @@ Welcome to <strong>Media Literacy Planet</strong>! The alien invaders are hurlin
 <style>
 body {
   min-height: 100vh;
-  background: url('https://img.freepik.com/free-vector/space-ship-window-with-space-planets-stars-cartoon-vector-illustration_1284-16119.jpg') no-repeat center center fixed;
+  background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;

@@ -12,8 +12,17 @@ breadcrumb: true
 author: "Adhav, Ethan, Rishabh"
 date: 2025-10-28
 ---
+<style>
+body {
+  min-height: 100vh;
+  background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #061226; /* fallback */
+}
+</style>
 
 # Truth Scanner
+### Alien Attacks
 
 <style>
   .game-container {

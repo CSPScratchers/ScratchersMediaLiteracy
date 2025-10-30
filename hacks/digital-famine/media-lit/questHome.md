@@ -14,7 +14,7 @@ lxdData:
     - Title: "Awareness"
       Genre: "Integration"
       Level: 1
-      Description: "Team-defined analytics and mastery module"
+      Description: "First line of defense from foreign invaders. To understand media literacy, you first need to become aware of it's subconcious effects"
       Categories: ["Certificate", "Integration", "Achievement"]
       Video: "/digital-famine/media-lit/submodule_1-video"
       Lessons: "/digital-famine/media-lit/submodule_1/"
@@ -23,7 +23,7 @@ lxdData:
     - Title: "Bias Detector"
       Genre: "Integration"
       Level: 2
-      Description: "Team-defined analytics and mastery module"
+      Description: "Second line of defense from foreign invaders. The news you read can have underlying biases that you might not even be aware of."
       Categories: ["Certificate", "Integration", "Achievement"]
       Video: "/digital-famine/media-lit/submodule_2-video"
       Lessons: "/digital-famine/media-lit/submodule_2/"
@@ -32,7 +32,7 @@ lxdData:
     - Title: "Truth Scanner"
       Genre: "Integration"
       Level: 3
-      Description: "Team-defined analytics and mastery module"
+      Description: "Third line of defense from foreign invaders. News headlines can seem believable, but are they really?"
       Categories: ["Certificate", "Integration", "Achievement"]
       Video: "/digital-famine/media-lit/submodule_3-video"
       Lessons: "/digital-famine/media-lit/submodule_3/"
@@ -41,7 +41,7 @@ lxdData:
     - Title: "Bias Sort"
       Genre: "Integration"
       Level: 4
-      Description: "Team-defined analytics and mastery module"
+      Description: "Final line of defense from foreign invaders. Sort the headlines to practice understanding of bias and wording."
       Categories: ["Certificate", "Integration", "Achievement"]
       Video: "/digital-famine/media-lit/submodule_4-video"
       Lessons: "/digital-famine/media-lit/submodule_4/"

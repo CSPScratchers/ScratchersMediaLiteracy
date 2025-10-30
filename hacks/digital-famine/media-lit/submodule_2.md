@@ -27,10 +27,9 @@ Before you recieve your mission to protect Media Literacy Planet, you'll need to
 <style>
 body {
   min-height: 100vh;
-  /* use the image placed under hacks/digital-famine/media-lit/media/assets/ */
-  background: url('/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
+  background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-color:rgb(17, 18, 19); /* fallback */
+  background-color: #061226; /* fallback */
 }
 .game-container {
     background: linear-gradient(135deg, #353e74ff, #9384d5ff);
