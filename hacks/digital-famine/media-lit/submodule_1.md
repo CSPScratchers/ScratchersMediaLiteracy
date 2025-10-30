@@ -13,10 +13,26 @@ author: "Aashika Patel, Varada Vichare"
 date: 2025-10-21
 ---
 
-# Awareness: Media Purpose Training
+# Welcome to Media Literacy Planet 🌍🛰️
 
 <div class="intro-text">
-Welcome to <strong>Media Literacy Planet</strong>! The alien invaders are hurling artifacts of news at you in an attempt to scramble human understanding. Your mission: <strong>sort each artifact by its purpose — Persuade, Inform, or Sell</strong>. Every correct choice strengthens your protective shield. Reach a score of <strong>7</strong> to unlock <strong>Shield Level 1</strong> and advance to the next challenge in defending media literacy across the galaxy.
+  <strong>Mission Log:</strong><br><br>
+  You've entered the <strong>orbit of Media Literacy Planet</strong> — a critical stop in your journey to restore humanity’s understanding of truth. Across galaxies, misinformation has clouded the minds of humans, blurring the lines between fact and fiction. Your mission is to recover media literacy and bring knowledge back to Earth. <br><br>
+
+  <strong>Why this matters:</strong><br>
+  Media literacy is our first line of defense against deception. Every day, countless messages compete for our attention — some inform, others persuade, and many sell. Without the ability to recognize these differences, society risks confusion, bias, and manipulation.<br><br>
+
+  <strong>Skills you will gain:</strong><br>
+  On this planet, you will train to:
+  <ul>
+    <li>Differentiate between <strong>real</strong> and <strong>fake news</strong></li>
+    <li>Identify the <strong>purpose</strong> behind different forms of media</li>
+    <li>Recognize persuasive techniques and emotional manipulation</li>
+    <li>Develop critical thinking and skepticism when encountering online content</li>
+  </ul>
+
+  <strong>Mission Objective:</strong><br>
+  Alien invaders are attacking with confusing news artifacts! Sort each artifact by its purpose — <strong>Persuade</strong>, <strong>Inform</strong>, or <strong>Sell</strong>. Each correct classification strengthens your shield. Reach a score of <strong>7</strong> to complete the mission and proceed to the next planet: <strong>Media Bias</strong>.
 </div>
 
 <style>
@@ -170,11 +186,12 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 6px solid #00ccff;
-  box-shadow: 0 0 120px #00ccff66, 0 0 250px #00ccff33;
+  border: 6px solid rgba(0,204,255,0.7);
+  box-shadow: 0 0 120px rgba(0,204,255,0.4), 0 0 250px rgba(0,204,255,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   pointer-events: none;
   z-index: 999;
+  opacity: 0.85;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,6 +201,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  opacity: 0.9;
 }
 
 .leaderboard {
@@ -226,6 +244,24 @@ body {
   display: none;
   text-align: center;
 }
+
+#next-submodule-btn {
+  display: none;
+  margin-top: 15px;
+  background: #00ccff;
+  color: black;
+  font-weight: 700;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#next-submodule-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0,204,255,0.6);
+}
 </style>
 
 <div class="game-screen">
@@ -254,7 +290,6 @@ body {
   <div class="controls">
     <button class="btn btn-ghost" id="reset-btn">Reset</button>
     <button class="btn btn-ghost" id="autofill-btn">Autofill</button>
-    <button class="btn btn-primary" id="submit-btn">Submit Score</button>
   </div>
 
   <div class="shield" id="shield">
@@ -272,7 +307,12 @@ body {
   </div>
 </div>
 
-<div class="notification" id="notification">Congratulations. Shield Level 1 has been achieved. Proceed to the next mission.</div>
+<div class="notification" id="notification">
+  Congratulations. Shield Level 1 has been achieved.<br>
+  Proceed to the next mission: <strong>Media Bias</strong>.
+  <br>
+  <button id="next-submodule-btn" onclick="goToNextSubmodule()">Go to Media Bias ➜</button>
+</div>
 
 <script>
 const ARTIFACTS = [
@@ -297,6 +337,7 @@ const artifactsArea = document.getElementById("artifacts");
 const bins = document.querySelectorAll(".bin");
 const shieldEl = document.getElementById("shield");
 const notification = document.getElementById("notification");
+const nextBtn = document.getElementById("next-submodule-btn");
 
 function updateDisplays() {
   scoreDisplay.textContent = `Score: ${score}`;
@@ -330,6 +371,7 @@ function initGame() {
   shieldGrowing = false;
   shieldEl.style.transform = 'translate(-50%, -50%) scale(0)';
   notification.style.display = 'none';
+  nextBtn.style.display = 'none';
   updateDisplays();
 
   ARTIFACTS.sort(() => Math.random() - 0.5).forEach((artifact, i) => {
@@ -370,18 +412,18 @@ function showShieldComplete() {
   let scale = parseFloat(shieldEl.style.transform.match(/scale\(([\d.]+)\)/)?.[1]) || 1;
   shieldEl.style.display = 'flex';
   notification.style.display = 'block';
-  
+  nextBtn.style.display = 'inline-block';
+
   function grow() {
     scale += 0.05;
     shieldEl.style.transform = `translate(-50%, -50%) scale(${scale})`;
     if (scale < 15) {
       requestAnimationFrame(grow);
     } else {
-      // After 5 seconds, hide shield & notification
       setTimeout(() => {
         shieldEl.style.display = 'none';
         notification.style.display = 'none';
-      }, 5000);
+      }, 2000);
     }
   }
   grow();
@@ -400,12 +442,12 @@ function autofillArtifacts() {
   if (score >= 7 && !shieldGrowing) { showShieldComplete(); }
 }
 
+function goToNextSubmodule() {
+  window.location.href = "{{ site.baseurl }}/digital-famine/media-lit/submodule_2/";
+}
+
 document.getElementById("reset-btn").addEventListener("click", initGame);
 document.getElementById("autofill-btn").addEventListener("click", autofillArtifacts);
-document.getElementById("submit-btn").addEventListener("click", () => {
-  alert(`Score submitted: ${score}`);
-  initGame();
-});
 
 updateDisplays();
 initGame();
