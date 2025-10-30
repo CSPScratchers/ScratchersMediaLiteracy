@@ -16,7 +16,7 @@ date: 2025-10-21
 # Awareness: Media Purpose Training
 
 <div class="intro-text">
-Welcome to <strong>Media Literacy Planet</strong>! The alien invaders are hurling artifacts of news at you in an attempt to scramble human understanding. Your mission: <strong>sort each artifact by its purpose — Persuade, Inform, or Sell</strong>. Every correct choice strengthens your protective shield. Reach a score of <strong>7</strong> to unlock <strong>Shield Level 1</strong> and advance to the next challenge in defending media literacy across the galaxy.
+Welcome to <strong>Media Literacy Planet</strong>! The alien invaders are hurling pieces of news at you in an attempt to scramble human understanding. Your mission: <strong>sort each artifact by its purpose: Persuade, Inform, or Sell</strong>. Every correct choice strengthens your protective shield. Reach a score of <strong>7</strong> to unlock <strong>Shield Level 1</strong> and advance to the next challenge in recovering from the digital famine. 
 </div>
 
 <style>
