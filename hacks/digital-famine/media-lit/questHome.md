@@ -38,5 +38,14 @@ lxdData:
       Lessons: "/digital-famine/media-lit/submodule_3/"
       Image: "/images/digital-famine/media-lit.svg"
       Alt: "Analytics Submodule 3"
+    - Title: "Bias Sort"
+      Genre: "Integration"
+      Level: 4
+      Description: "Team-defined analytics and mastery module"
+      Categories: ["Certificate", "Integration", "Achievement"]
+      Video: "/digital-famine/media-lit/submodule_4-video"
+      Lessons: "/digital-famine/media-lit/submodule_4/"
+      Image: "/images/digital-famine/media-lit.svg"
+      Alt: "Analytics Submodule 4"
 ---
 {%- include tailwind/cs-portfolio-quest_info.html -%}
