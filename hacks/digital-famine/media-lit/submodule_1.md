@@ -38,7 +38,7 @@ date: 2025-10-21
 <style>
 body {
   min-height: 100vh;
-  background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
+  background: url('https://cdn.pixabay.com/photo/2017/02/12/21/29/spaceship-2068432_1280.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;
