@@ -38,8 +38,9 @@ date: 2025-10-21
 <style>
 body {
   min-height: 100vh;
-  background: url('https://img.freepik.com/free-vector/space-ship-window-with-space-planets-stars-cartoon-vector-illustration_1284-16119.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: url('https://img.freepik.com/free-vector/space-ship-window-with-space-planets-stars-cartoon-vector-illustration_1284-16119.jpg') center center fixed;
+  background-size: contain;
+  background-color: black;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;
   overflow-x: hidden;
@@ -123,6 +124,8 @@ body {
   border-radius: 14px;
   min-height: 140px;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .artifact {
@@ -140,6 +143,13 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   color: #ffffff;
+  position: absolute;
+  animation: flyIn 2s ease-out forwards;
+}
+
+@keyframes flyIn {
+  0% { opacity: 0; transform: translateX(-100vw); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
 .artifact.dragging {
@@ -149,7 +159,7 @@ body {
 
 .controls {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 15px;
   margin-top: 20px;
 }
@@ -186,9 +196,9 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 6px solid rgba(0,204,255,0.7);
-  box-shadow: 0 0 120px rgba(0,204,255,0.4), 0 0 250px rgba(0,204,255,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 6px solid rgba(0,204,255,0.6);
+  box-shadow: 0 0 120px rgba(0,204,255,0.3), 0 0 250px rgba(0,204,255,0.2);
+  transition: transform 0.3s ease;
   pointer-events: none;
   z-index: 999;
   opacity: 0.85;
@@ -201,33 +211,24 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0.9;
+  filter: drop-shadow(0 0 10px #00ccff);
 }
 
-.leaderboard {
-  margin-top: 30px;
-  background: rgba(0,0,40,0.5);
-  padding: 15px;
-  border-radius: 12px;
+.alien {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: alienFly 1.5s ease-in forwards;
+  z-index: 999;
+  pointer-events: none;
 }
 
-.leaderboard-table {
-  width: 100%;
-  border-collapse: collapse;
-  color: #ffffff;
+@keyframes alienFly {
+  0% { opacity: 0; transform: translateY(-50px) scale(0.5); }
+  50% { opacity: 1; transform: translateY(50px) scale(1); }
+  100% { opacity: 0; transform: translateY(250px) scale(0.2); }
 }
 
-.leaderboard-table th,
-.leaderboard-table td {
-  padding: 10px;
-  text-align: left;
-}
-
-.leaderboard-table tr:nth-child(even) {
-  background: rgba(255,255,255,0.05);
-}
-
-/* On-screen center notification */
 .notification {
   position: fixed;
   top: 50%;
@@ -246,13 +247,11 @@ body {
 }
 
 #next-submodule-btn {
-  display: none;
-  margin-top: 15px;
   background: #00ccff;
   color: black;
   font-weight: 700;
   border: none;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
@@ -271,18 +270,9 @@ body {
   </div>
 
   <div class="bins-container">
-    <div class="bin" data-bin="Persuade">
-      <div class="bin-label">Persuade</div>
-      <div class="bin-content"></div>
-    </div>
-    <div class="bin" data-bin="Inform">
-      <div class="bin-label">Inform</div>
-      <div class="bin-content"></div>
-    </div>
-    <div class="bin" data-bin="Sell">
-      <div class="bin-label">Sell</div>
-      <div class="bin-content"></div>
-    </div>
+    <div class="bin" data-bin="Persuade"><div class="bin-label">Persuade</div><div class="bin-content"></div></div>
+    <div class="bin" data-bin="Inform"><div class="bin-label">Inform</div><div class="bin-content"></div></div>
+    <div class="bin" data-bin="Sell"><div class="bin-label">Sell</div><div class="bin-content"></div></div>
   </div>
 
   <div class="artifacts-area" id="artifacts"></div>
@@ -290,28 +280,17 @@ body {
   <div class="controls">
     <button class="btn btn-ghost" id="reset-btn">Reset</button>
     <button class="btn btn-ghost" id="autofill-btn">Autofill</button>
+    <button class="btn btn-primary" id="next-submodule-btn" onclick="goToNextSubmodule()">Next Mission ➜</button>
   </div>
 
   <div class="shield" id="shield">
-    <img src="https://img.freepik.com/premium-vector/security_1162360-7974.jpg?semt=ais_hybrid&w=740&q=80" alt="Shield Icon">
-  </div>
-
-  <div class="leaderboard">
-    <h3>Top Players</h3>
-    <table class="leaderboard-table">
-      <thead>
-        <tr><th>Rank</th><th>Player</th><th>Score</th></tr>
-      </thead>
-      <tbody id="leaderboard-body"></tbody>
-    </table>
+    <img src="https://i.ibb.co/m6YwkrW/security-shield.png" alt="Shield Icon">
   </div>
 </div>
 
 <div class="notification" id="notification">
   Congratulations. Shield Level 1 has been achieved.<br>
   Proceed to the next mission: <strong>Media Bias</strong>.
-  <br>
-  <button id="next-submodule-btn" onclick="goToNextSubmodule()">Go to Media Bias ➜</button>
 </div>
 
 <script>
@@ -327,21 +306,17 @@ const ARTIFACTS = [
 ];
 
 let score = 0;
-let currentPlayer = "Guest";
 let placedArtifacts = new Set();
 let shieldGrowing = false;
 
-const scoreDisplay = document.getElementById("score");
-const playerDisplay = document.getElementById("player-name");
 const artifactsArea = document.getElementById("artifacts");
 const bins = document.querySelectorAll(".bin");
 const shieldEl = document.getElementById("shield");
 const notification = document.getElementById("notification");
-const nextBtn = document.getElementById("next-submodule-btn");
+const scoreDisplay = document.getElementById("score");
 
 function updateDisplays() {
   scoreDisplay.textContent = `Score: ${score}`;
-  playerDisplay.textContent = `Player: ${currentPlayer}`;
 }
 
 function createArtifactCard(artifact, index) {
@@ -351,31 +326,41 @@ function createArtifactCard(artifact, index) {
   div.draggable = true;
   div.dataset.purpose = artifact.purpose;
   div.dataset.id = `artifact-${index}`;
-
-  div.addEventListener("dragstart", (e) => {
-    if (placedArtifacts.has(div.dataset.id)) { e.preventDefault(); return; }
-    div.classList.add("dragging");
-    e.dataTransfer.setData("text/plain", div.dataset.id);
-  });
-
-  div.addEventListener("dragend", () => div.classList.remove("dragging"));
-
+  div.style.top = `${Math.random() * 150}px`;
+  div.style.left = `${Math.random() > 0.5 ? "-200px" : "100%"}`;
   return div;
 }
 
+function spawnAlien() {
+  const alien = document.createElement("img");
+  alien.src = "https://i.ibb.co/pzDsc6P/alien-fly.png";
+  alien.className = "alien";
+  alien.style.left = `${Math.random() * 80 + 10}%`;
+  alien.style.top = "0";
+  artifactsArea.appendChild(alien);
+  setTimeout(() => alien.remove(), 1500);
+}
+
 function initGame() {
-  artifactsArea.innerHTML = '';
-  document.querySelectorAll(".bin-content").forEach(b => b.innerHTML = '');
+  artifactsArea.innerHTML = "";
   placedArtifacts.clear();
   score = 0;
-  shieldGrowing = false;
   shieldEl.style.transform = 'translate(-50%, -50%) scale(0)';
-  notification.style.display = 'none';
-  nextBtn.style.display = 'none';
+  notification.style.display = "none";
+  shieldGrowing = false;
   updateDisplays();
 
   ARTIFACTS.sort(() => Math.random() - 0.5).forEach((artifact, i) => {
     artifactsArea.appendChild(createArtifactCard(artifact, i));
+  });
+
+  document.querySelectorAll(".artifact").forEach(div => {
+    div.addEventListener("dragstart", e => {
+      if (placedArtifacts.has(div.dataset.id)) { e.preventDefault(); return; }
+      div.classList.add("dragging");
+      e.dataTransfer.setData("text/plain", div.dataset.id);
+    });
+    div.addEventListener("dragend", () => div.classList.remove("dragging"));
   });
 }
 
@@ -396,6 +381,7 @@ bins.forEach(bin => {
       showShieldEffect();
       if (score >= 7 && !shieldGrowing) { showShieldComplete(); }
     } else {
+      spawnAlien();
       artifact.animate([{ transform: "translateX(0)" }, { transform: "translateX(-5px)" }, { transform: "translateX(5px)" }, { transform: "translateX(0)" }], { duration: 300 });
     }
     updateDisplays();
@@ -403,33 +389,28 @@ bins.forEach(bin => {
 });
 
 function showShieldEffect() {
-  let currentScale = parseFloat(shieldEl.style.transform.match(/scale\(([\d.]+)\)/)?.[1]) || 0;
+  let currentScale = parseFloat(shieldEl.style.transform.match(/scale\\(([\d.]+)\\)/)?.[1]) || 0;
   shieldEl.style.transform = `translate(-50%, -50%) scale(${currentScale + 0.15})`;
 }
 
 function showShieldComplete() {
   shieldGrowing = true;
-  let scale = parseFloat(shieldEl.style.transform.match(/scale\(([\d.]+)\)/)?.[1]) || 1;
-  shieldEl.style.display = 'flex';
-  notification.style.display = 'block';
-  nextBtn.style.display = 'inline-block';
+  let scale = parseFloat(shieldEl.style.transform.match(/scale\\(([\d.]+)\\)/)?.[1]) || 1;
+  notification.style.display = "block";
 
   function grow() {
     scale += 0.05;
     shieldEl.style.transform = `translate(-50%, -50%) scale(${scale})`;
-    if (scale < 15) {
-      requestAnimationFrame(grow);
-    } else {
-      setTimeout(() => {
-        shieldEl.style.display = 'none';
-        notification.style.display = 'none';
-      }, 2000);
+    if (scale < 15) requestAnimationFrame(grow);
+    else {
+      setTimeout(() => { shieldEl.style.display = "none"; }, 2000);
     }
   }
   grow();
 }
 
-function autofillArtifacts() {
+document.getElementById("reset-btn").addEventListener("click", initGame);
+document.getElementById("autofill-btn").addEventListener("click", () => {
   ARTIFACTS.forEach((a, i) => {
     const bin = Array.from(bins).find(b => b.dataset.bin === a.purpose);
     const artifact = document.querySelector(`[data-id="artifact-${i}"]`);
@@ -439,16 +420,12 @@ function autofillArtifacts() {
     showShieldEffect();
   });
   updateDisplays();
-  if (score >= 7 && !shieldGrowing) { showShieldComplete(); }
-}
+  if (score >= 7 && !shieldGrowing) showShieldComplete();
+});
 
 function goToNextSubmodule() {
   window.location.href = "{{ site.baseurl }}/digital-famine/media-lit/submodule_2/";
 }
 
-document.getElementById("reset-btn").addEventListener("click", initGame);
-document.getElementById("autofill-btn").addEventListener("click", autofillArtifacts);
-
-updateDisplays();
 initGame();
 </script>
