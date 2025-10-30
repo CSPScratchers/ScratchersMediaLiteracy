@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Submodule 3"
-description: "Submodule 3 of Analytics/Admin Mini-Quest"
+title: "Truth Scanner"
+description: "Third line of defense from foregin invaders"
 permalink: /digital-famine/media-lit/submodule_3/
 parent: "Analytics/Admin"
 team: "Scratchers"
 submodule: 3
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]
+breadcrumb: true
 author: "Adhav, Ethan, Rishabh"
 date: 2025-10-28
 ---
