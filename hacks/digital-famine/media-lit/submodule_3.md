@@ -3,9 +3,9 @@ layout: post
 title: "Truth Scanner"
 description: "Third line of defense from foregin invaders"
 footer:
-  previous: /digital-famine/media-lit/submodule_2/
+  previous: /digital-famine/media-lit/submodule_2
   home: /hacks/navigation
-  next: /digital-famine/media-lit/submodule_4/
+  next: /digital-famine/media-lit/submodule_4
 parent: "Analytics/Admin"
 team: "Scratchers"
 submodule: 3
