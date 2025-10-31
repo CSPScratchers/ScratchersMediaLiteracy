@@ -121,7 +121,7 @@ gap: 20px;
 .bin {
 flex: 1;
 min-height: 160px;
-background: rgba(0,0,50,0.4);
+background: rgba(230, 17, 237, 1);
 border: 2px dashed #00ccff;
 border-radius: 14px;
 padding: 12px;
@@ -135,8 +135,8 @@ transition: all 0.3s ease;
 
 
 .bin.highlight {
-background: rgba(0,204,255,0.25);
-border-color: #00f;
+background: rgba(11, 193, 238, 0.25);
+border-color: rgba(68, 68, 210, 0.75);
 transform: translateY(-2px);
 }
 
