@@ -16,36 +16,32 @@ lxdData:
       Level: 1
       Description: "First line of defense from foreign invaders. To understand media literacy, you first need to become aware of it's subconcious effects"
       Categories: ["Certificate", "Integration", "Achievement"]
-      Video: "/digital-famine/media-lit/submodule_1-video"
       Lessons: "/digital-famine/media-lit/submodule_1/"
-      Image: "/images/digital-famine/media-lit.svg"
+      Image: "/images/digital-famine/mediaawareness.png"
       Alt: "Analytics Submodule 1"
     - Title: "Bias Detector"
       Genre: "Integration"
       Level: 2
       Description: "Second line of defense from foreign invaders. The news you read can have underlying biases that you might not even be aware of."
       Categories: ["Certificate", "Integration", "Achievement"]
-      Video: "/digital-famine/media-lit/submodule_2-video"
       Lessons: "/digital-famine/media-lit/submodule_2/"
-      Image: "/images/digital-famine/media-lit.svg"
+      Image: "/images/digital-famine/mediabias.png"
       Alt: "Analytics Submodule 2"
     - Title: "Truth Scanner"
       Genre: "Integration"
       Level: 3
       Description: "Third line of defense from foreign invaders. News headlines can seem believable, but are they really?"
       Categories: ["Certificate", "Integration", "Achievement"]
-      Video: "/digital-famine/media-lit/submodule_3-video"
       Lessons: "/digital-famine/media-lit/submodule_3/"
-      Image: "/images/digital-famine/media-lit.svg"
+      Image: "/images/digital-famine/radar.png"
       Alt: "Analytics Submodule 3"
     - Title: "Bias Sort"
       Genre: "Integration"
       Level: 4
       Description: "Final line of defense from foreign invaders. Sort the headlines to practice understanding of bias and wording."
       Categories: ["Certificate", "Integration", "Achievement"]
-      Video: "/digital-famine/media-lit/submodule_4-video"
       Lessons: "/digital-famine/media-lit/submodule_4/"
-      Image: "/images/digital-famine/media-lit.svg"
+      Image: "/images/digital-famine/congratulations.png"
       Alt: "Analytics Submodule 4"
     - Title: "Vault"
       Genre: "Integration"
