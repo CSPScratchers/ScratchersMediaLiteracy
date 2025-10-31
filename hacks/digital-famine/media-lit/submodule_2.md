@@ -470,12 +470,34 @@ body {
             tbody.innerHTML = '<tr><td colspan="3">Unable to load leaderboard</td></tr>';
         }
     }
+        // feedback modal/message
+        function showCongrats() {
+            const msg = document.createElement('div');
+            msg.style.position = 'fixed';
+            msg.style.top = '0';
+            msg.style.left = '0';
+            msg.style.width = '100vw';
+            msg.style.height = '100vh';
+            msg.style.background = 'rgba(0,0,0,0.55)';
+            msg.style.display = 'flex';
+            msg.style.alignItems = 'center';
+            msg.style.justifyContent = 'center';
+            msg.style.zIndex = '9999';
+            msg.innerHTML = `<div style="background: #6a75c8ff;padding:36px 32px 28px 32px;border-radius:18px;box-shadow:0 8px 32px #353e7444;text-align:center;max-width:420px;">
+                <h2 style='color:#2b6cb0;margin-bottom:12px;'>Congratulations!</h2>
+                <div style='font-size:1.1rem;color:#033e61;margin-bottom:18px;'>You defended Media Literacy Planet.<br><b>The shield level is now 2.</b></div>
+                <div style='font-size:1.05rem;color: #a3cbf5ff;margin-bottom:18px;'>Continue to the next line of defense: <b>Truth Scanner</b>!</div>
+                <button style='margin-top:8px;padding:8px 18px;border-radius:8px;background:#4299e1;color:white;font-weight:700;border:none;cursor:pointer;' onclick='this.closest("div").parentNode.remove()'>Close</button>
+            </div>`;
+            document.body.appendChild(msg);
+        }
 
     document.getElementById('reset-btn').addEventListener('click', initGame);
   document.getElementById('autofill-images').addEventListener('click', () => autofillImageGame(true));
     document.getElementById('submit-btn').addEventListener('click', () => {
         postScore(currentPlayer, score);
-        alert(`Score submitted! Final score: ${score}`);
+        // show a congratulatory modal instead of a simple alert
+        showCongrats();
         initGame();
     });
     document.getElementById('refresh-lb').addEventListener('click', fetchLeaderboard);
