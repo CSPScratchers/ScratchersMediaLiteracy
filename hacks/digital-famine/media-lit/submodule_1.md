@@ -359,6 +359,27 @@ text-decoration: underline;
 }
 .alien-popup.show { display: flex; }
 .alien-popup .btn { margin-top: 8px; }
+
+/* add key unlocked popup styling */
+.key-popup {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.95);
+  color: #04263a;
+  padding: 16px 20px;
+  border-radius: 12px;
+  z-index: 1100;
+  display: none;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  flex-direction: column;
+  text-align: center;
+}
+.key-popup.show { display: flex; }
+.key-popup .key-svg { width: 72px; height: 72px; }
 </style>
 
 
@@ -443,6 +464,15 @@ text-decoration: underline;
     <button class="btn btn-primary" id="alien-close">Continue</button>
   </div>
 
+  <!-- Key unlocked popup (shown when shield completes) -->
+  <div class="key-popup" id="key-popup" role="status" aria-hidden="true">
+    <svg class="key-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="#FFD36B" d="M21 10a5 5 0 1 0-8.9 2.1L3 21v-3.6L7.6 13 9 14.4 12 11.4 13.4 12.8 11.4 14.8 13 16.4 17 12.4A5 5 0 0 0 21 10z"/>
+    </svg>
+    <div id="key-msg" style="font-weight:800;">You've unlocked the First Key!</div>
+    <button class="btn btn-ghost" id="key-close">Close</button>
+  </div>
+
   <div class="notification" id="notification">
     Congratulations. Shield Level 1 has been achieved. Proceed to the next mission:
     <a id="media-bias-link" href="{{ site.baseurl }}/digital-famine/media-lit/submodule_2/" aria-label="Go to Media Bias (Submodule 2)">Media Bias</a>
@@ -511,6 +541,8 @@ const alienPopup = document.getElementById("alien-popup");
 const alienMsg = document.getElementById("alien-msg");
 const alienClose = document.getElementById("alien-close");
 const mediaBiasLink = document.getElementById("media-bias-link");
+const keyPopup = document.getElementById('key-popup');
+const keyClose = document.getElementById('key-close');
 
 /* make the media bias link darker so it stands out */
 if (mediaBiasLink) mediaBiasLink.style.color = "#04263a";
@@ -690,6 +722,20 @@ function showShieldComplete() {
     nextMission.style.display = 'inline-block';
   }
 
+  // Award the first key (persist and show the key popup)
+  try { localStorage.setItem('ml_key1_unlocked', '1'); } catch (e) {}
+  if (keyPopup) {
+    keyPopup.classList.add('show');
+    keyPopup.setAttribute('aria-hidden', 'false');
+    // auto-hide after a short time but allow manual close
+    setTimeout(() => {
+      if (keyPopup) {
+        keyPopup.classList.remove('show');
+        keyPopup.setAttribute('aria-hidden', 'true');
+      }
+    }, 3000);
+  }
+
   function grow() {
     scale += 0.05;
     shieldEl.style.transform = `translate(-50%, -50%) scale(${scale})`;
@@ -727,6 +773,12 @@ if (score >= 8 && !shieldGrowing) { showShieldComplete(); }
 
 document.getElementById("reset-btn").addEventListener("click", initGame);
 document.getElementById("autofill-btn").addEventListener("click", autofillArtifacts);
+if (keyClose) keyClose.addEventListener('click', () => {
+  if (keyPopup) {
+    keyPopup.classList.remove('show');
+    keyPopup.setAttribute('aria-hidden', 'true');
+  }
+});
 
 
 updateDisplays();
