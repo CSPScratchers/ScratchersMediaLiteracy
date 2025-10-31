@@ -4,7 +4,6 @@ title: "Awareness"
 description: "First line of defense from foreign invaders"
 permalink: /digital-famine/media-lit/submodule_1/
 footer:
-  previous: /digital-famine/media-lit/intro
   home: /digital-famine/media-lit
   next: /digital-famine/media-lit/submodule_2
 parent: "Analytics/Admin"
