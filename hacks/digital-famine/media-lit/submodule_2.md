@@ -23,6 +23,7 @@ Every distorted headline, every emotional post, every half-true story is a signa
 
 ## Media Bias Training 
 Before you recieve your mission to protect Media Literacy Planet, you'll need to undergo training. Test your knowledge of media bias by sorting news outlets into their typical editorial positions. This training will help you understand the different biases present in major news sources to defeat the invaders. 
+**Begin by pressing reset to load the images**
 
 <style>
 body {
