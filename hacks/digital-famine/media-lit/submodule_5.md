@@ -101,7 +101,7 @@ date: 2025-10-28
         `;
       } else {
         msg.innerHTML = `
-          <div style="background:#3d1e2e;border-radius:16px;padding:18px;margin-top:12px;box-shadow:0 0 25px #c1435886;">
+          <div style="background:#3d1e2e;border-radius:16px;padding:18px;margin-top:12px;box-shadow:0 0 25px #e5455fba;">
             <h3 style="color:#ff8fa5;"> Access Denied</h3>
             <p style="color:#ffcdd2;">Incorrect code sequence. Recheck your mission intel and try again.</p>
           </div>
