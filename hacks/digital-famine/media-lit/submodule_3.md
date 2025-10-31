@@ -9,6 +9,7 @@ submodule: 3
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]
 breadcrumb: true
+microblog: true
 author: "Adhav, Ethan, Rishabh"
 date: 2025-10-28
 ---

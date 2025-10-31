@@ -9,6 +9,7 @@ submodule: 1
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]
 breadcrumb: true
+microblog: true
 author: "Aashika Patel, Varada Vichare"
 date: 2025-10-21
 ---

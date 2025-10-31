@@ -9,6 +9,7 @@ submodule: 2
 categories: [CSP, Submodule, Analytics/Admin]
 tags: [analytics, submodule, curators]
 breadcrumb: true
+microblog: true
 author: "Anwita Bandaru and Nick Diaz"
 date: 2025-10-21
 ---
