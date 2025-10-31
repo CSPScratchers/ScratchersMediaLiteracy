@@ -507,15 +507,6 @@ text-decoration: underline;
     <button class="btn btn-primary" id="alien-close">Continue</button>
   </div>
 
-  <!-- Key unlocked popup (shown when shield completes) -->
-  <div class="key-popup" id="key-popup" role="status" aria-hidden="true">
-    <img id="key-img"
-         src="https://png.pngtree.com/png-vector/20240612/ourlarge/pngtree-golden-key-with-ornate-design-on-transparent-background-png-image_12700952.png"
-         alt="Golden Key" class="key-img" aria-hidden="true">
-    <div id="key-msg">You've unlocked the First Key!</div>
-    <button class="btn btn-ghost" id="key-close">Close</button>
-  </div>
-
   <div class="notification" id="notification">
     Congratulations. Shield Level 1 has been achieved. Proceed to the next mission:
     <a id="media-bias-link" href="{{ site.baseurl }}/digital-famine/media-lit/submodule_2/" aria-label="Go to Media Bias (Submodule 2)">Media Bias</a>
@@ -584,8 +575,6 @@ const alienPopup = document.getElementById("alien-popup");
 const alienMsg = document.getElementById("alien-msg");
 const alienClose = document.getElementById("alien-close");
 const mediaBiasLink = document.getElementById("media-bias-link");
-const keyPopup = document.getElementById('key-popup');
-const keyClose = document.getElementById('key-close');
 
 /* make the media bias link darker so it stands out */
 if (mediaBiasLink) mediaBiasLink.style.color = "#04263a";
@@ -765,20 +754,6 @@ function showShieldComplete() {
     nextMission.style.display = 'inline-block';
   }
 
-  // Award the first key (persist and show the key popup)
-  try { localStorage.setItem('ml_key1_unlocked', '1'); } catch (e) {}
-  if (keyPopup) {
-    keyPopup.classList.add('show');
-    keyPopup.setAttribute('aria-hidden', 'false');
-    // auto-hide after a short time but allow manual close
-    setTimeout(() => {
-      if (keyPopup) {
-        keyPopup.classList.remove('show');
-        keyPopup.setAttribute('aria-hidden', 'true');
-      }
-    }, 3000);
-  }
-
   function grow() {
     scale += 0.05;
     shieldEl.style.transform = `translate(-50%, -50%) scale(${scale})`;
@@ -816,12 +791,8 @@ if (score >= 8 && !shieldGrowing) { showShieldComplete(); }
 
 document.getElementById("reset-btn").addEventListener("click", initGame);
 document.getElementById("autofill-btn").addEventListener("click", autofillArtifacts);
-if (keyClose) keyClose.addEventListener('click', () => {
-  if (keyPopup) {
-    keyPopup.classList.remove('show');
-    keyPopup.setAttribute('aria-hidden', 'true');
-  }
-});
+// remove keyClose listener (no-op)
+// if (keyClose) keyClose.addEventListener('click', () => { ... });  <-- removed
 
 
 updateDisplays();
