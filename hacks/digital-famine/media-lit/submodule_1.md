@@ -360,26 +360,43 @@ text-decoration: underline;
 .alien-popup.show { display: flex; }
 .alien-popup .btn { margin-top: 8px; }
 
-/* add key unlocked popup styling */
+/* add key unlocked popup styling (background removed so key image appears without a white box) */
 .key-popup {
   position: fixed;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255,255,255,0.95);
-  color: #04263a;
-  padding: 16px 20px;
+  background: transparent; /* make popup background transparent so key image background doesn't show */
+  color: #fff;
+  padding: 8px 12px;
   border-radius: 12px;
   z-index: 1100;
   display: none;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
   flex-direction: column;
   text-align: center;
 }
+/* show variant */
 .key-popup.show { display: flex; }
-.key-popup .key-svg { width: 72px; height: 72px; }
+
+/* key image styling — ensure transparent bg and a subtle drop shadow */
+.key-popup .key-img {
+  width: 88px;
+  height: auto;
+  background: transparent;
+  display: block;
+  mix-blend-mode: multiply; /* helps blend white pixels on many backgrounds */
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
+}
+
+/* key message style when popup appears */
+.key-popup #key-msg {
+  font-weight: 800;
+  color: #fff;
+  margin-top: 6px;
+}
 </style>
 
 
@@ -466,10 +483,8 @@ text-decoration: underline;
 
   <!-- Key unlocked popup (shown when shield completes) -->
   <div class="key-popup" id="key-popup" role="status" aria-hidden="true">
-    <svg class="key-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path fill="#FFD36B" d="M21 10a5 5 0 1 0-8.9 2.1L3 21v-3.6L7.6 13 9 14.4 12 11.4 13.4 12.8 11.4 14.8 13 16.4 17 12.4A5 5 0 0 0 21 10z"/>
-    </svg>
-    <div id="key-msg" style="font-weight:800;">You've unlocked the First Key!</div>
+    <img id="key-img" src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Key Icon" class="key-img" aria-hidden="true">
+    <div id="key-msg">You've unlocked the First Key!</div>
     <button class="btn btn-ghost" id="key-close">Close</button>
   </div>
 
