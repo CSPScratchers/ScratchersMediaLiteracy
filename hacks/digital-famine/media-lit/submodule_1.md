@@ -3,6 +3,9 @@ layout: post
 title: "Awareness"
 description: "First line of defense from foreign invaders"
 permalink: /digital-famine/media-lit/submodule_1/
+footer:
+  home: /hacks/navigation
+  next: /digital-famine/media-lit/submodule_2
 parent: "Analytics/Admin"
 team: "Scratchers"
 submodule: 1
