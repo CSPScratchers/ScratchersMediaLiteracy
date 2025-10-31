@@ -1493,8 +1493,8 @@ class MinecraftMusicManager {
             if (this.musicGain) {
                 this.musicGain.gain.linearRampToValueAtTime(0, this.audioContext.currentTime + 5);
             }
-            setTimeout(() => this.isPlaying = false, 5000);
-        }, (duration - 5) * 1000);
+            setTimeout(() => this.isPlaying = false, 2000);
+        }, (duration - 2) * 1000);
     }
     
     playMysteriousMelody(theme) {
