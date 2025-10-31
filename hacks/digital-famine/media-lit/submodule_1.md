@@ -121,7 +121,7 @@ gap: 20px;
 .bin {
 flex: 1;
 min-height: 160px;
-background: rgba(230, 17, 237, 1);
+background: rgba(25, 238, 231, 0.4);
 border: 2px dashed #00ccff;
 border-radius: 14px;
 padding: 12px;
