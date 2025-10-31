@@ -47,6 +47,15 @@ lxdData:
       Lessons: "/digital-famine/media-lit/submodule_4/"
       Image: "/images/digital-famine/media-lit.svg"
       Alt: "Analytics Submodule 4"
+    - Title: "Vault"
+      Genre: "Integration"
+      Level: 4
+      Description: "Enter the vault code with numbers gathered through the mission to get your Media Literacy certificate"
+      Categories: ["Certificate", "Integration", "Achievement"]
+      Video: "/digital-famine/media-lit/submodule_5-video"
+      Lessons: "/digital-famine/media-lit/submodule_5/"
+      Image: "/images/digital-famine/media-lit.svg"
+      Alt: "Analytics Submodule 5"
 ---
 {%- include tailwind/cs-portfolio-quest_info.html -%}
 
