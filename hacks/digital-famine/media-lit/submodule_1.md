@@ -401,8 +401,10 @@ text-decoration: underline;
 <div class="controls">
   <button class="btn btn-ghost" id="reset-btn">Reset</button>
   <button class="btn btn-ghost" id="autofill-btn">Autofill</button>
-  <!-- hidden until completion/autofill triggers the congratulations message -->
-  <a class="btn btn-primary" id="next-mission" href="/digital-famine/media-lit/submodule_2/" aria-label="Go to Media Bias (Submodule 2)" style="display:none">Next Mission</a>
+  <!-- use Jekyll baseurl so the link works regardless of domain -->
+  <a class="btn btn-primary" id="next-mission"
+     href="{{ site.baseurl }}/digital-famine/media-lit/submodule_2/"
+     aria-label="Go to Media Bias (Submodule 2)" style="display:none">Next Mission</a>
 </div>
 
 
@@ -443,7 +445,7 @@ text-decoration: underline;
 
   <div class="notification" id="notification">
     Congratulations. Shield Level 1 has been achieved. Proceed to the next mission:
-    <a href="/digital-famine/media-lit/submodule_2/" aria-label="Go to Media Bias (Submodule 2)" id="media-bias-link">Media Bias</a>
+    <a id="media-bias-link" href="{{ site.baseurl }}/digital-famine/media-lit/submodule_2/" aria-label="Go to Media Bias (Submodule 2)">Media Bias</a>
   </div>
 </div>
 
@@ -683,7 +685,10 @@ function showShieldComplete() {
   notification.style.display = 'block';
   // reveal Next Mission when showing the congratulations notification
   const nextMission = document.getElementById("next-mission");
-  if (nextMission) nextMission.style.display = 'inline-block';
+  if (nextMission) {
+    nextMission.href = "{{ site.baseurl }}/digital-famine/media-lit/submodule_2/";
+    nextMission.style.display = 'inline-block';
+  }
 
   function grow() {
     scale += 0.05;
