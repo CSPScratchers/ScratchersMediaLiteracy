@@ -490,7 +490,9 @@ text-decoration: underline;
 
   <!-- Key unlocked popup (shown when shield completes) -->
   <div class="key-popup" id="key-popup" role="status" aria-hidden="true">
-    <img id="key-img" src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Key Icon" class="key-img" aria-hidden="true">
+    <img id="key-img"
+         src="https://png.pngtree.com/png-vector/20240612/ourlarge/pngtree-golden-key-with-ornate-design-on-transparent-background-png-image_12700952.png"
+         alt="Golden Key" class="key-img" aria-hidden="true">
     <div id="key-msg">You've unlocked the First Key!</div>
     <button class="btn btn-ghost" id="key-close">Close</button>
   </div>
