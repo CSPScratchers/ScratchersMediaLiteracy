@@ -15,7 +15,7 @@ date: 2025-10-28
 
 <div style="min-height:100vh;background:radial-gradient(circle at 20% 20%,#0e153a,#000418 80%);color:#e8f0ff;font-family:'Poppins',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:40px;">
 
-  <div style="background:#101833cc;backdrop-filter:blur(10px);border:1px solid #2b356a;border-radius:20px;box-shadow:0 0 30px #1d2a88aa;max-width:650px;width:100%;padding:40px;text-align:center;">
+  <div style="background:#101833cc;backdrop-filter:blur(10px);border:1px solid #323e77ff;border-radius:20px;box-shadow:0 0 30px #0f21a6cd;max-width:650px;width:100%;padding:40px;text-align:center;">
     
     <h1 style="font-size:2rem;letter-spacing:1px;margin-bottom:10px;background:linear-gradient(90deg,#69aaff,#a2b7ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
       🛰️ Mission Debrief: Final Access
@@ -45,7 +45,7 @@ date: 2025-10-28
     .digit-card {
       background: #18204d;
       border: 1px solid #2e3b8d;
-      box-shadow: 0 0 12px #233b9b88 inset;
+      box-shadow: 0 0 12px #4058b997 inset;
       border-radius: 14px;
       width: 70px;
       height: 80px;
@@ -59,11 +59,11 @@ date: 2025-10-28
      min-height: 100vh;
      background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: #061226; /* fallback */
+    background-color: #0a1b3aff; /* fallback */
     }
     .digit-card:hover {
       transform: scale(1.08);
-      box-shadow: 0 0 18px #6c4bb588 inset;
+      box-shadow: 0 0 18px #805ad4b4 inset;
     }
     .digit-card input {
       background: transparent;
@@ -101,7 +101,7 @@ date: 2025-10-28
         `;
       } else {
         msg.innerHTML = `
-          <div style="background:#3d1e2e;border-radius:16px;padding:18px;margin-top:12px;box-shadow:0 0 25px #ff3b5b55;">
+          <div style="background:#3d1e2e;border-radius:16px;padding:18px;margin-top:12px;box-shadow:0 0 25px #c1435886;">
             <h3 style="color:#ff8fa5;"> Access Denied</h3>
             <p style="color:#ffcdd2;">Incorrect code sequence. Recheck your mission intel and try again.</p>
           </div>
