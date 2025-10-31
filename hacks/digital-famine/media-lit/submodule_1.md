@@ -50,12 +50,12 @@ date: 2025-10-21
 
 <style>
 body {
-min-height: 100vh;
-background: url('https://img.freepik.com/free-vector/space-ship-window-with-space-planets-stars-cartoon-vector-illustration_1284-16119.jpg') no-repeat center center fixed;
-background-size: cover;
-font-family: system-ui, -apple-system, sans-serif;
-color: #ffffff;
-overflow-x: hidden;
+  min-height: 100vh;
+  background: url('{{ site.baseurl }}/images/digital-famine/space.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
 
@@ -511,7 +511,7 @@ text-align: center;
 
   <!-- Alien popup (image background removed via CSS). Replace src if you want a different image. -->
   <div class="alien-popup" id="alien-popup" role="dialog" aria-modal="true" aria-hidden="true">
-    <img id="alien-img" src="https://png.pngtree.com/png-vector/20240530/ourmid/pngtree-scary-alien-in-a-flying-saucer-cartoon-character-png-image_12552691.png" alt="alien">
+    <img id="alien-img" src="{{ site.baseurl }}/images/digital-famine/alien.png" alt="alien">
     <div id="alien-msg">Wrong! The alien appears.</div>
     <button class="btn btn-primary" id="alien-close">Continue</button>
   </div>
