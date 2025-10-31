@@ -21,8 +21,24 @@ body {
 }
 </style>
 
-# Truth Scanner
-### Alien Attacks
+<div class="intro-text">
+<h3>Finding the truth</h3>
+  As the invasion intensifies, the aliens have shifted tactics. They’re no longer attacking with lasers, they’re attacking with lies. Distorted transmissions are flooding human news networks, spreading confusion and chaos. Your mission: operate the Truth Scanner to protect the planet from misinformation.
+
+  <br><br>
+
+  Each signal that appears is disguised as a news headline. Some are real and straight from trusted Earth sources like CNN, BBC, or Reuters. Others are fabricated distortions broadcast by the alien disinformation network.
+
+  <br><br>
+
+  Your job is to analyze each transmission and decide:
+  <ul>
+    <li><strong>True:</strong> a verified human report</li>
+    <li><strong>False:</strong> an alien-generated fake</li>
+  </ul>
+
+  Every correct answer strengthens Earth’s media defense shield. Each mistake weakens it. Stay sharp — the aliens are adapting, and their fakes will grow more convincing as the game progresses.
+</div>
 
 <style>
   .game-container {
@@ -39,6 +55,15 @@ body {
     margin: 28px auto;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   }
+  .intro-text {
+  background: rgba(0,0,30,0.85);
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
 
   h1 {
     margin-bottom: 1rem;

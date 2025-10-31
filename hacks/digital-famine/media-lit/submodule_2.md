@@ -14,16 +14,21 @@ date: 2025-10-21
 ---
 # Bias Detector
 
-### Why is checking for bias Important?
-The alien misinformation swarm doesn’t invade with lasers or ships — it attacks minds.
-Every distorted headline, every emotional post, every half-true story is a signal designed to scramble human judgment. Once people can’t tell what’s real, they stop trusting reliable information. Biased language can make ordinary events sound urgent or frightening, pushing people to react before they think. When that happens, truth fades and manipulation spreads.
---- 
+<div class="intro-text">
+  <h3>Why is checking for bias Important?</h3>
+  <p>
+    The alien misinformation swarm doesn’t invade with lasers or ships — it attacks minds.<br>
+    Every distorted headline, every emotional post, every half-true story is a signal designed to scramble human judgment. Once people can’t tell what’s real, they stop trusting reliable information. Biased language can make ordinary events sound urgent or frightening, pushing people to react before they think. When that happens, truth fades and manipulation spreads.
+  </p>
+  <hr>
+  <p><strong>By identifying bias, you decode the signal. You learn to notice when words are chosen to provoke rather than inform.</strong></p>
 
-**By identifying bias, you decode the signal. You learn to notice when words are chosen to provoke rather than inform.**
-
-## Media Bias Training 
-Before you recieve your mission to protect Media Literacy Planet, you'll need to undergo training. Test your knowledge of media bias by sorting news outlets into their typical editorial positions. This training will help you understand the different biases present in major news sources to defeat the invaders. 
-**Begin by pressing reset to load the images**
+  <h2>Media Bias Training</h2>
+  <p>
+    Before you receive your mission to protect Media Literacy Planet, you'll need to undergo training. Test your knowledge of media bias by sorting news outlets into their typical editorial positions. This training will help you understand the different biases present in major news sources to defeat the invaders.
+  </p>
+  <p><strong>Begin by pressing reset to load the images</strong></p>
+</div>
 
 <style>
 body {
@@ -32,6 +37,15 @@ body {
   background-size: cover;
   background-color: #061226; /* fallback */
 }
+ .intro-text {
+  background: rgba(0,0,30,0.85);
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+ }
 .game-container {
     background: linear-gradient(135deg, #353e74ff, #9384d5ff);
     border-radius: 15px;
@@ -40,7 +54,6 @@ body {
     margin: 20px 0;
     font-family: system-ui, -apple-system, sans-serif;
 }
-
 .game-header {
     display: flex;
     justify-content: space-between;
