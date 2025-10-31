@@ -517,7 +517,7 @@ text-align: center;
   </div>
 
   <div class="notification" id="notification">
-    Congratulations. Shield Level 1 has been achieved. Proceed to the next mission:
+    Congratulations. Shield Level 1 has been achieved. The number to access the vault is 2. Proceed to the next mission:
     <a id="media-bias-link" href="{{ site.baseurl }}/digital-famine/media-lit/submodule_2/" aria-label="Go to Media Bias (Submodule 2)">Media Bias</a>
   </div>
 </div>
