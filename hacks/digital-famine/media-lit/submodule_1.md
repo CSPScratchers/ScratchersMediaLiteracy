@@ -367,42 +367,60 @@ text-decoration: underline;
 .alien-popup.show { display: flex; }
 .alien-popup .btn { margin-top: 8px; }
 
-/* add key unlocked popup styling (background removed so key image appears without a white box) */
+/* updated key popup: transparent background, placed to the right of the centered notification;
+   responsive: moves below notification on small screens to avoid overlap */
 .key-popup {
   position: fixed;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent; /* make popup background transparent so key image background doesn't show */
+  top: 50%;
+  left: calc(50% + 220px); /* place to the right of the centered notification */
+  transform: translateY(-50%);
+  background: transparent; /* ensure no box behind the key image */
   color: #fff;
-  padding: 8px 12px;
-  border-radius: 12px;
-  z-index: 1100;
+  padding: 6px;
+  border-radius: 10px;
+  z-index: 1101; /* above the notification (notification z-index is 1000) */
   display: none;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  gap: 10px;
   flex-direction: column;
   text-align: center;
+  pointer-events: auto;
 }
-/* show variant */
-.key-popup.show { display: flex; }
 
-/* key image styling — ensure transparent bg and a subtle drop shadow */
+/* subtle pop animation when key appears */
+.key-popup.show {
+  display: flex;
+  animation: key-pop 380ms cubic-bezier(.2,.9,.2,1);
+}
+@keyframes key-pop {
+  0%   { transform: translateY(-50%) scale(0.8); opacity: 0; }
+  60%  { transform: translateY(-50%) scale(1.06); opacity: 1; }
+  100% { transform: translateY(-50%) scale(1); opacity: 1; }
+}
+
+/* image styling: PNG already has transparency; drop-shadow to separate from background */
 .key-popup .key-img {
   width: 88px;
   height: auto;
   background: transparent;
   display: block;
-  mix-blend-mode: multiply; /* helps blend white pixels on many backgrounds */
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.55));
 }
 
-/* key message style when popup appears */
+/* message style */
 .key-popup #key-msg {
   font-weight: 800;
   color: #fff;
   margin-top: 6px;
+}
+
+/* responsive: on narrow screens move the key below the notification (avoid overlap) */
+@media (max-width: 980px) {
+  .key-popup {
+    left: 50%;
+    top: calc(50% + 120px); /* below the notification */
+    transform: translate(-50%, 0);
+  }
 }
 </style>
 
