@@ -219,8 +219,17 @@ transition: all 0.2s ease;
 
 
 .btn-primary {
-background: #00ccff;
-color: black;
+  /* darker teal so white text is readable */
+  background: linear-gradient(180deg, #007a9e 0%, #005f7a 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,95,122,0.22);
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
 }
 
 
@@ -313,24 +322,24 @@ position: fixed;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-background: #00ccff;
-color: black;
-padding: 25px 35px;
+background: rgba(2, 24, 40, 0.95); /* deep, dark background */
+color: #ffffff;
+padding: 22px 30px;
 border-radius: 12px;
 font-weight: 700;
 font-size: 1.3rem;
 z-index: 1000;
-box-shadow: 0 0 25px rgba(0,0,0,0.6);
+box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 display: none;
 text-align: center;
 }
 
 
-/* make the notification link darker so it stands out against the background */
+/* make the Media Bias link lighter so it stands out on the darker notification */
 .notification a {
-color: #04263a;
-font-weight: 800;
-text-decoration: underline;
+  color: #ffd36b; /* warm gold for contrast */
+  font-weight: 800;
+  text-decoration: underline;
 }
 
 /* add lives display + alien popup styling */
