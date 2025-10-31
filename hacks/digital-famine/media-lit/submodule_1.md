@@ -784,11 +784,11 @@ function showShieldComplete() {
     if (scale < 15) {
       requestAnimationFrame(grow);
     } else {
-      // After 2 seconds, hide shield & notification (changed from 5s to 2s)
+      // After 3 seconds, hide shield & notification (was 2s)
       setTimeout(() => {
         shieldEl.style.display = 'none';
         notification.style.display = 'none';
-      }, 2000);
+      }, 3000);
     }
   }
   grow();
