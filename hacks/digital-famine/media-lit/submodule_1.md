@@ -15,29 +15,36 @@ date: 2025-10-21
 
 # Welcome to Media Literacy Planet 🌍🛰️
 
-
 <div class="intro-text">
  <strong>Mission Log:</strong><br><br>
  You've entered the <strong>orbit of Media Literacy Planet</strong> — a critical stop in your journey to restore humanity’s understanding of truth. Across galaxies, misinformation has clouded the minds of humans, blurring the lines between fact and fiction. Your mission is to recover media literacy and bring knowledge back to Earth. <br><br>
 
-
  <strong>Why this matters:</strong><br>
- Media literacy is our first line of defense against deception. Every day, countless messages compete for our attention — some inform, others persuade, and many sell. Without the ability to recognize these differences, society risks confusion, bias, and manipulation.<br><br>
+ Media literacy is our first line of defense against deception. Every day, countless messages compete for our attention — some inform, others persuade, and many sell. Without the ability to recognize these differences, society risks confusion, bias, and manipulation. Developing media literacy helps individuals critically evaluate information, discern trustworthy sources, and resist false narratives.<br><br>
 
+ <strong>Types of misinformation you may encounter:</strong><br>
+ - <strong>Fake news:</strong> Completely false stories designed to look like legitimate journalism.<br>
+ - <strong>Clickbait:</strong> Sensational headlines crafted to get you to click, often exaggerating or distorting facts.<br>
+ - <strong>Propaganda:</strong> Information selectively presented to promote a political or ideological agenda.<br>
+ - <strong>Deepfakes & manipulated media:</strong> Images, videos, or audio altered to mislead viewers.<br>
+ - <strong>Rumors & conspiracy theories:</strong> Unverified claims that spread rapidly, especially on social media.<br>
+ - <strong>Biased reporting:</strong> Facts presented with slanted language or selective omissions to influence perception.<br><br>
 
  <strong>Skills you will gain:</strong><br>
  On this planet, you will train to:
  <ul>
    <li>Differentiate between <strong>real</strong> and <strong>fake news</strong></li>
    <li>Identify the <strong>purpose</strong> behind different forms of media</li>
-   <li>Recognize persuasive techniques and emotional manipulation</li>
+   <li>Recognize persuasive techniques, emotional manipulation, and biased framing</li>
+   <li>Spot misleading visuals, deepfakes, and other altered media</li>
    <li>Develop critical thinking and skepticism when encountering online content</li>
+   <li>Learn how to verify sources and cross-check information</li>
  </ul>
-
 
  <strong>Mission Objective:</strong><br>
  Alien invaders are attacking with confusing news artifacts! Sort each artifact by its purpose — <strong>Persuade</strong>, <strong>Inform</strong>, or <strong>Sell</strong>. Each correct classification strengthens your shield. Reach a score of <strong>8</strong> to complete the mission and proceed to the next planet: <strong>Media Bias</strong>.
 </div>
+
 
 
 <style>
