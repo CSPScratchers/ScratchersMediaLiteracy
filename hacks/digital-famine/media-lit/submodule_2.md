@@ -497,10 +497,16 @@ body {
             msg.style.justifyContent = 'center';
             msg.style.zIndex = '9999';
             msg.innerHTML = `<div style="background: #6a75c8ff;padding:36px 32px 28px 32px;border-radius:18px;box-shadow:0 8px 32px #353e7444;text-align:center;max-width:420px;">
-                <h2 style='color:#2b6cb0;margin-bottom:12px;'>Congratulations!</h2>
-                <div style='font-size:1.1rem;color:#033e61;margin-bottom:18px;'>You defended Media Literacy Planet.<br><b>The shield level is now 2.</b></div>
-                <div style='font-size:1.05rem;color: #a3cbf5ff;margin-bottom:18px;'>Continue to the next line of defense: <b>Truth Scanner</b>!</div>
-                <button style='margin-top:8px;padding:8px 18px;border-radius:8px;background:#4299e1;color:white;font-weight:700;border:none;cursor:pointer;' onclick='this.closest("div").parentNode.remove()'>Close</button>
+            <h2 style='color:#2b6cb0;margin-bottom:12px;'>Congratulations!</h2>
+            <div style='font-size:1.1rem;color:#033e61;margin-bottom:18px;'>You defended Media Literacy Planet again.<br><b>The shield level is now 2.</b></div>
+            <div style='font-size:1.05rem;color:#a3cbf5ff;margin-bottom:18px;'>
+             Continue to the final defense: 
+            <b><a href="{{ site.baseurl }}/digital-famine/media-lit/submodule_3/" style="color:#a3cbf5ff;text-decoration:underline;">Truth Scanner</a></b>!
+             </div>
+            <button style='margin-top:8px;padding:8px 18px;border-radius:8px;background:#4299e1;color:white;font-weight:700;border:none;cursor:pointer;' 
+            onclick='window.location.href="{{ site.baseurl }}/digital-famine/media-lit/submodule_3/"'>
+            Continue
+            </button>
             </div>`;
             document.body.appendChild(msg);
         }
