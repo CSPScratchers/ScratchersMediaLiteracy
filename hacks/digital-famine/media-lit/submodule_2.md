@@ -259,6 +259,7 @@ body {
 </div>
 
 <script type="module">
+    console.log("✅ Game script loaded");
     import { javaURI, fetchOptions } from '{{site.baseurl}}/assets/js/api/config.js';
     
     // Configuration
@@ -512,43 +513,73 @@ body {
             document.body.appendChild(msg);
         }
 
-    document.getElementById('reset-btn').addEventListener('click', initGame);
-  document.getElementById('autofill-images').addEventListener('click', () => autofillImageGame(true));
-    document.getElementById('submit-btn').addEventListener('click', () => {
+    window.addEventListener('DOMContentLoaded', () => {
+    console.log("🚀 DOM fully loaded — initializing game & buttons");
+
+    // --- Start the game immediately ---
+    initGame(); // images will appear right away
+    console.log("✅ Game initialized automatically");
+
+    // --- RESET button ---
+    const resetBtn = document.getElementById('reset-btn');
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+        console.log("🔁 Reset clicked");
+        initGame();
+        });
+    }
+
+    // --- AUTOFILL button ---
+    const autofillBtn = document.getElementById('autofill-images');
+    if (autofillBtn) {
+        autofillBtn.addEventListener('click', () => {
+        console.log("✨ Autofill clicked");
+        autofillImageGame(true); // your existing autofill function
+        });
+    }
+
+    // --- SUBMIT button with validation ---
+    const submitBtn = document.getElementById('submit-btn');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+        console.log("📨 Submit clicked");
+
+        const totalImages = document.querySelectorAll('.image').length;
+        const placedCount = placedImages.size;
+
+        if (placedCount < totalImages) {
+            alert(`You haven’t placed all the images yet! You’ve placed ${placedCount} out of ${totalImages}.`);
+            return;
+        }
+
+        // Extra check for correct placement
+        let allCorrect = true;
+        document.querySelectorAll('.bin').forEach(bin => {
+            bin.querySelectorAll('.image').forEach(img => {
+            if (img.dataset.bin !== bin.dataset.bin) allCorrect = false;
+            });
+        });
+
+        if (!allCorrect) {
+            alert("Some images are in the wrong bins! Try again.");
+            return;
+        }
+
+        // Post score, show congrats, reset game
         postScore(currentPlayer, score);
-        // show a congratulatory modal instead of a simple alert
         showCongrats();
         initGame();
-    });
-    document.getElementById('refresh-lb').addEventListener('click', fetchLeaderboard);
-    document.getElementById('autofill-headlines').addEventListener('click', () => {
-      // place every headline into its correct bin and mark placed
-      document.querySelectorAll('.bin-contents').forEach(el => el.innerHTML = '');
-      state.placed = {};
-      HEADLINES.forEach(h => {
-        const node = document.querySelector(`.headline[data-id="${h.id}"]`);
-        const zone = h.correct;
-        const binEl = (zone === 'good') ? leftZone : rightZone;
-        const contents = binEl.querySelector('.bin-contents');
-        if (node) {
-          contents.appendChild(node);
-          node.style.opacity = '0.6';
-          node.style.cursor = 'default';
-        }
-        state.placed[h.id] = zone;
-      });
-      // perfect placement
-      state.score = HEADLINES.length;
-      state.lives = 3;
-      updateDisplays();
-      // show congrats automatically
-      showCongrats();
+        });
+      }
     });
 
     // Initialize
-    fetchUser();
-    initGame();
-    fetchLeaderboard();
-    setInterval(fetchLeaderboard, 30000); // Refresh every 30 seconds
+    window.onload = () => {
+        console.log("🌎 Window fully loaded — starting game");
+        fetchUser();
+        initGame();
+        fetchLeaderboard();
+        setInterval(fetchLeaderboard, 30000);
+    };
 </script>
 
