@@ -5,7 +5,7 @@ description: "Enter the vault code with numbers gathered through the mission to 
 permalink: /digital-famine/media-lit/submodule_5/
 footer:
   previous: /digital-famine/media-lit/submodule_4/
-  home: /hacks/navigation
+  home: /digital-famine/media-lit
 parent: "Analytics/Admin"
 team: "Scratchers"
 submodule: 3

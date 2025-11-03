@@ -39,7 +39,7 @@ date: 2025-10-21
 <style>
 body {
   min-height: 100vh;
-  background: url('{{ site.baseurl }}/images/digital-famine/space.jpg') no-repeat center center fixed;
+  background: url('{{ site.baseurl }}/hacks/digital-famine/media-lit/media/assets/spacebackground.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;

@@ -5,7 +5,7 @@ description: "Final line of defense from foregin invaders"
 permalink: /digital-famine/media-lit/submodule_4/
 footer:
   previous: /digital-famine/media-lit/submodule_3/
-  home: /hacks/navigation
+  home: /digital-famine/media-lit
   next: /digital-famine/media-lit/submodule_5/
 parent: "Analytics/Admin"
 team: "Scratchers"
