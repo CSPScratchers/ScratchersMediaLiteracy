@@ -31,15 +31,6 @@ date: 2025-10-21
  - <strong>Rumors & conspiracy theories:</strong> Unverified claims that spread rapidly, especially on social media.<br>
  - <strong>Biased reporting:</strong> Facts presented with slanted language or selective omissions to influence perception.<br><br>
 
- <strong>Skills you will gain:</strong><br>
- On this planet, you will train to:
- <ul>
-   <li>Differentiate between <strong>real</strong> and <strong>fake news</strong></li>
-   <li>Identify the <strong>purpose</strong> behind different forms of media</li>
-   <li>Develop critical thinking and skepticism when encountering online content</li>
-   <li>Learn how to verify sources and cross-check information</li>
- </ul>
-
  <strong>Mission Objective:</strong><br>
  Alien invaders are attacking with confusing news artifacts! Sort each artifact by its purpose: <strong>Persuade</strong>, <strong>Inform</strong>, or <strong>Sell</strong>. Each correct classification strengthens your shield. Reach a score of <strong>8</strong> to complete the mission and proceed to the next mission: <strong>Media Bias</strong>.
 </div>
